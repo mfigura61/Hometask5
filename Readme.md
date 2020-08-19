@@ -24,13 +24,13 @@
 
 Перейдем в /root/rpmbuild:  
 
->ls -nh
-total 8.0K
-drwxr-xr-x.  3 0 0   26 Aug 19 12:54 BUILD
-drwxr-xr-x.  2 0 0    6 Aug 19 13:19 BUILDROOT
-drwxr-xr-x.  3 0 0   20 Aug 19 13:19 RPMS
-drwxr-xr-x.  2 0 0 4.0K Aug 19 12:53 SOURCES
-drwxr-xr-x.  2 0 0   24 Aug 19 12:53 SPECS
+>ls -nh  
+total 8.0K  
+drwxr-xr-x.  3 0 0   26 Aug 19 12:54 BUILD  
+drwxr-xr-x.  2 0 0    6 Aug 19 13:19 BUILDROOT  
+drwxr-xr-x.  3 0 0   20 Aug 19 13:19 RPMS  
+drwxr-xr-x.  2 0 0 4.0K Aug 19 12:53 SOURCES  
+drwxr-xr-x.  2 0 0   24 Aug 19 12:53 SPECS  
 drwxr-xr-x.  2 0 0    6 Aug 19 12:54 SRPMS  
 
 В папке SPECS лежит spec-файл, который описывает что и как собирать, внесем изменения в SPECS/nginx.spec ,добавив в секцию %build необходимый нам модуль OpenSSL:  
