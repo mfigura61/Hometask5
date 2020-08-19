@@ -66,5 +66,19 @@ built with OpenSSL 1.0.2k-fips  26 Jan 2017
 TLS SNI support enabled
 configure arguments: --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib64/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-....
 ...
--fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -fPIC' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -pie'  
+-fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -fPIC' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -pie' 
+
+Можно было бы собрать nginx через make&&make install, но это некошерно и могут побить по рукам )  
+
+2. Создадим свой репозиторий  
+Для начала создаем папку в / нашего nginx - > mkdir /usr/share/nginx/html/repo  
+
+Копируем наш скомпилированный пакет nginx в папку с будущим репозиторием и скачиваем дополнительно пакет  
+
+>wget https://www.percona.com/redir/downloads/percona-release/redhat/1.0-21/percona-release-1.0-21.noarch.rpm -O /usr/share/nginx/html/repo/percona-release-1.0-21.noarch.rpm  
+
+Создаем репозиторий - createrepo /usr/share/nginx/html/repo/ и createrepo --update /usr/share/nginx/html/repo/  
+
+В location / в файле /etc/nginx/conf.d/default.conf добавим директиву autoindex on. В результате location будет выглядеть так:  
+
 
