@@ -80,5 +80,11 @@ configure arguments: --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-p
 Создаем репозиторий - createrepo /usr/share/nginx/html/repo/ и createrepo --update /usr/share/nginx/html/repo/  
 
 В location / в файле /etc/nginx/conf.d/default.conf добавим директиву autoindex on. В результате location будет выглядеть так:  
+>    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm; 
+	autoindex on;  
+    
+  
 
 
