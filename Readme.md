@@ -104,5 +104,12 @@ gpgcheck=0
 enabled=1  
 
 Проверим подключенный репозиторий - yum repolist enabled | grep otus или yum list --showduplicates | grep otus  
->
+>[root@otuslinux rpmbuild]# yum repolist enabled  | grep otus  
+Failed to set locale, defaulting to C  
+otus                                otus-linux        
 
+[root@otuslinux rpmbuild]# yum list --showduplicates | grep otus  
+Failed to set locale, defaulting to C  
+nginx.x86_64                                1:1.18.0-1.el7.ngx         otus       
+percona-release.noarch                      1.0-21                     otus     
+ 
