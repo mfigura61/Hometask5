@@ -54,3 +54,7 @@ total 2524
 -rw-r--r--. 1 root root  789552 Aug 19 13:19 nginx-1.18.0-1.el7.ngx.x86_64.rpm  
 -rw-r--r--. 1 root root 1792396 Aug 19 13:19 nginx-debuginfo-1.18.0-1.el7.ngx.x86_64.rpm  
 
+Устанавливаем rpm пакет  
+>yum localinstall -y RPMS/x86_64/nginx-1.18.0-1.el7.ngx.x86_64.rpm  
+Запускаем nginx - systemctl start nginx и можем посмотреть с какими параметрами nginx был скомпилирован, выполнив nginx -V  
+
