@@ -86,8 +86,15 @@ configure arguments: --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-p
 	autoindex on;  
     
 Проверяем синтаксис nginx -t и делаем nginx -s reload  
->
-Теперь можем просмотреть наши пакеты через HTTP  curl -a http://localhost/repo/  
->
+>[root@otuslinux rpmbuild]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+
+Теперь можем просмотреть наши пакеты через HTTP  curl -a http://localhost/repo/    
+>[root@otuslinux rpmbuild]# curl -a http://localhost/repo/  
+...
+<a href="nginx-1.18.0-1.el7.ngx.x86_64.rpm">nginx-1.18.0-1.el7.ngx.x86_64.rpm</a>                  19-Aug-2020 13:19              789552  
+<a href="percona-release-1.0-21.noarch.rpm">percona-release-1.0-21.noarch.rpm</a>                  07-Jul-2020 10:33               17956  
+
 
 
