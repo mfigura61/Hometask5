@@ -85,6 +85,9 @@ configure arguments: --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-p
         index  index.html index.htm; 
 	autoindex on;  
     
-  
+Проверяем синтаксис nginx -t и делаем nginx -s reload  
+>
+Теперь можем просмотреть наши пакеты через HTTP  curl -a http://localhost/repo/  
+>
 
 
