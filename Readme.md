@@ -14,8 +14,8 @@
 Во проекте приложен файл вагрант и вспомогательный внешний скрипт, который, собственно, все и делает.
 1. Создадим свой RPM
 Устанавливаем все необходимые пакеты: 
-> yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils openssl-devel zlib-devel pcre-devel gcc  
+      yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils openssl-devel zlib-devel pcre-devel gcc  
 Скачиваем src.rpm - 
-> wget https://nginx.org/packages/centos/7/SRPMS/nginx-1.18.0-1.el7.ngx.src.rpm
+      wget https://nginx.org/packages/centos/7/SRPMS/nginx-1.18.0-1.el7.ngx.src.rpm
 Воспользуемся rpm -i, распакуем src и spec файл: 
 > rpm -i /root/nginx-1.18.0-1.el7.ngx.src.rpm
