@@ -47,3 +47,5 @@ make %{?_smp_mflags}
     --with-ld-opt="%{WITH_LD_OPT}"
 make %{?_smp_mflags}
 
+Установим зависимости - yum-builddep SPECS/nginx.spec, затем собираем - rpmbuild -bb SPECS/nginx.spec
+Видим два собранных пакета:
