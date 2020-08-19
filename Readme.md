@@ -96,5 +96,11 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <a href="nginx-1.18.0-1.el7.ngx.x86_64.rpm">nginx-1.18.0-1.el7.ngx.x86_64.rpm</a>                  19-Aug-2020 13:19              789552  
 <a href="percona-release-1.0-21.noarch.rpm">percona-release-1.0-21.noarch.rpm</a>                  07-Jul-2020 10:33               17956  
 
+Теперь? чтобы протестировать репозиторий - создаем файл /etc/yum.repos.d/otus.repo и вписываем в него следующее:  
+>[otus]  
+name=otus-linux  
+baseurl=http://localhost/repo  
+gpgcheck=0  
+enabled=1  
 
 
