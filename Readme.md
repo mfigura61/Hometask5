@@ -103,4 +103,6 @@ baseurl=http://localhost/repo
 gpgcheck=0  
 enabled=1  
 
+Проверим подключенный репозиторий - yum repolist enabled | grep otus или yum list --showduplicates | grep otus  
+>
 
