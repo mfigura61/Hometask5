@@ -20,4 +20,13 @@
 >wget https://nginx.org/packages/centos/7/SRPMS/nginx-1.18.0-1.el7.ngx.src.rpm  
 
 Воспользуемся rpm -i, распакуем src и spec файл:   
->rpm -i /root/nginx-1.18.0-1.el7.ngx.src.rpm
+>rpm -i /root/nginx-1.18.0-1.el7.ngx.src.rpm  
+ls -nh
+total 8.0K
+drwxr-xr-x.  3 0 0   26 Aug 19 12:54 BUILD
+drwxr-xr-x.  2 0 0    6 Aug 19 13:19 BUILDROOT
+drwxr-xr-x.  3 0 0   20 Aug 19 13:19 RPMS
+drwxr-xr-x.  2 0 0 4.0K Aug 19 12:53 SOURCES
+drwxr-xr-x.  2 0 0   24 Aug 19 12:53 SPECS
+drwxr-xr-x.  2 0 0    6 Aug 19 12:54 SRPMS
+
