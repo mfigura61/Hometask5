@@ -48,4 +48,9 @@ make %{?_smp_mflags}
 make %{?_smp_mflags}
 
 Установим зависимости - yum-builddep SPECS/nginx.spec, затем собираем - rpmbuild -bb SPECS/nginx.spec  
-Видим два собранных пакета:
+Видим два собранных пакета:  
+>[root@otuslinux rpmbuild]# ls -l /root/rpmbuild/RPMS/x86_64/  
+total 2524  
+-rw-r--r--. 1 root root  789552 Aug 19 13:19 nginx-1.18.0-1.el7.ngx.x86_64.rpm  
+-rw-r--r--. 1 root root 1792396 Aug 19 13:19 nginx-debuginfo-1.18.0-1.el7.ngx.x86_64.rpm  
+
